@@ -8,6 +8,7 @@ public class OfferPage {
     public WebDriver driver;
 
     public OfferPage(WebDriver driver) {
+
         this.driver = driver;
     }
 
