@@ -2,19 +2,15 @@ package stepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import pageObjects.LandingPage;
 import pageObjects.OfferPage;
 import pageObjects.PageObjectManager;
-import utils.TextContextSetup;
-
-import java.util.Iterator;
-import java.util.Set;
+import utils.TestContextSetup;
 
 public class OfferPageStepDefinitions {
 
-    private  TextContextSetup testContextSetup;
+    private TestContextSetup testContextSetup;
     public String offerPageProductName;
     public PageObjectManager pageObjectManager;
 
@@ -22,9 +18,9 @@ public class OfferPageStepDefinitions {
     //loosly coupled
     //Factory Design Pattern
 
-    public OfferPageStepDefinitions(TextContextSetup textContextSetup) {
+    public OfferPageStepDefinitions(TestContextSetup testContextSetup) {
 
-        this.testContextSetup=textContextSetup;
+        this.testContextSetup= testContextSetup;
     }
 
     public void switchToOfferPage(){

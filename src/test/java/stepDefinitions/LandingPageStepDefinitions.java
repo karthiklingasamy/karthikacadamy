@@ -2,18 +2,15 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import pageObjects.LandingPage;
-import utils.TextContextSetup;
+import utils.TestContextSetup;
 
 public class LandingPageStepDefinitions {
 
-    private  TextContextSetup textContextSetup;
+    private TestContextSetup testContextSetup;
 
-    public LandingPageStepDefinitions(TextContextSetup textContextSetup) {
-            this.textContextSetup=textContextSetup;
+    public LandingPageStepDefinitions(TestContextSetup testContextSetup) {
+            this.testContextSetup = testContextSetup;
     }
 
     /*public WebDriver driver;
@@ -30,10 +27,10 @@ public class LandingPageStepDefinitions {
     @When("User searched with shortname {string} and extracted actual name of product")
     public void user_searched_with_shortname_and_extracted_actual_name_of_product(String shortName) throws InterruptedException {
         //LandingPage landingPage = new LandingPage(textContextSetup.driver);
-        LandingPage landingPage = textContextSetup.pageObjectManager.getLandingPage();
+        LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();
         landingPage.searchItem(shortName);
         Thread.sleep(2000);
-        textContextSetup.landingPageProductName=landingPage.getProductName().split("-")[0].trim();
-        System.out.println(textContextSetup.landingPageProductName + "is extracted from the Home Page");
+        testContextSetup.landingPageProductName=landingPage.getProductName().split("-")[0].trim();
+        System.out.println(testContextSetup.landingPageProductName + "is extracted from the Home Page");
     }
 }
