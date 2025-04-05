@@ -25,9 +25,8 @@ public class TestBase {
                  driver = new ChromeDriver();
              }
 
-             if(prop.getProperty("browser").equalsIgnoreCase("chrome")) {
-                 //System.setProperty("webdriver.chrome.driver", "C:/QAF/chromedriver-win64/chromedriver.exe");
-                 //driver = new ChromeDriver();
+             if(prop.getProperty("browser").equalsIgnoreCase("firefox")) {
+               //firefox code
              }
 
              driver.get(url);
