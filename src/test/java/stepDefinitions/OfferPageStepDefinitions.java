@@ -13,6 +13,7 @@ public class OfferPageStepDefinitions {
     private TestContextSetup testContextSetup;
     public String offerPageProductName;
     public PageObjectManager pageObjectManager;
+    public LandingPage landingPage;
 
     //Single Responsibility Principle
     //loosly coupled
@@ -21,6 +22,7 @@ public class OfferPageStepDefinitions {
     public OfferPageStepDefinitions(TestContextSetup testContextSetup) {
 
         this.testContextSetup= testContextSetup;
+        this.landingPage=testContextSetup.pageObjectManager.getLandingPage();
     }
 
     public void switchToOfferPage(){
@@ -28,7 +30,7 @@ public class OfferPageStepDefinitions {
         //textContextSetup.driver.findElement(By.linkText("Top Deals")).click();
         //LandingPage landingPage=new LandingPage(textContextSetup.driver);
         //pageObjectManager=new PageObjectManager(textContextSetup.driver);
-        LandingPage landingPage=testContextSetup.pageObjectManager.getLandingPage();
+
         landingPage.selectTopDealsPage();
         /*Set<String> s1=textContextSetup.driver.getWindowHandles();
         Iterator<String> it=s1.iterator();

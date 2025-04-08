@@ -32,4 +32,9 @@ public class LandingPage {
     public void selectTopDealsPage(){
         driver.findElement(topDeals).click();
     }
+
+    public String getTitleLandingPage(){
+        return driver.getTitle();
+    }
+
 }
