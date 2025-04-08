@@ -8,6 +8,7 @@ import io.cucumber.testng.CucumberOptions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
 
 import java.util.Iterator;
 import java.util.Set;
@@ -16,7 +17,11 @@ import java.util.Set;
 monochrome = true,dryRun = false)
 public class TestNGTestRunner extends AbstractTestNGCucumberTests {
 
-
-
+    @Override
+    @DataProvider(parallel = true)
+    public Object[][] scenarios()
+    {
+        return super.scenarios();
+    }
 
 }
