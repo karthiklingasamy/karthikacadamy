@@ -24,7 +24,7 @@ public class LandingPageStepDefinitions {
        // textContextSetup.driver.get("https://rahulshettyacademy.com/seleniumPractise/#/");
 
     }
-    @When("User searched with shortname {string} and extracted actual name of product")
+    @When("^User searched with shortname (.+) and extracted actual name of product$")
     public void user_searched_with_shortname_and_extracted_actual_name_of_product(String shortName) throws InterruptedException {
         //LandingPage landingPage = new LandingPage(textContextSetup.driver);
         LandingPage landingPage = testContextSetup.pageObjectManager.getLandingPage();

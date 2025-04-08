@@ -39,7 +39,7 @@ public class OfferPageStepDefinitions {
 
     }
 
-    @Then("User searched for {string} Shortname in offers page")
+    @Then("^User searched for (.+) Shortname in offers page$")
     public void user_searched_for_same_shortname_in_offers_page_to_check_if_product_exist(String shortName) throws InterruptedException {
         switchToOfferPage();
         //OfferPage offerPage=new OfferPage(testContextSetup.driver);
